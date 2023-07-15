@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зін список джерел</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #BACCAB;">
+</body>
+<script>
+    const references = [
+        ['Давид Бурлюк', [
+            'https://uk.wikipedia.org/wiki/%D0%91%D1%83%D1%80%D0%BB%D1%8E%D0%BA_%D0%94%D0%B0%D0%B2%D0%B8%D0%B4_%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B8%D1%87',
+        ]],
+        ['Соломія Павличко', [
+            'https://uk.wikipedia.org/wiki/%D0%9F%D0%B0%D0%B2%D0%BB%D0%B8%D1%87%D0%BA%D0%BE_%D0%A1%D0%BE%D0%BB%D0%BE%D0%BC%D1%96%D1%8F_%D0%94%D0%BC%D0%B8%D1%82%D1%80%D1%96%D0%B2%D0%BD%D0%B0',
+            'https://povaha.org.ua/solomiya-pavlychko-ya-lyudyna-zhyttya/',
+            'https://krytyka.com/ua/reviews/natsionalizm-seksualnist-oriientalizm-skladnyy-svit-ahatanhela-krymskoho',
+        ]],
+        ['Майк Йогансен', [
+            'https://proslovo.com/#15/50.00892/36.23515/-17.6/45',
+            'https://uain.press/blogs/978297-978297',
+            'https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%B9%D0%BA_%D0%99%D0%BE%D0%B3%D0%B0%D0%BD%D1%81%D0%B5%D0%BD',
+        ]],
+        ['Софія Яблонська', [
+            'https://tyzhden.ua/ij-nalezhav-uves-svit-daleki-obrii-sofii-iablonskoi/',
+            'https://localhistory.org.ua/texts/statti/sofiia-iablonska-trevel-blogerka-z-minulogo-stolittia/',
+            'https://uk.wikipedia.org/wiki/%D0%AF%D0%B1%D0%BB%D0%BE%D0%BD%D1%81%D1%8C%D0%BA%D0%B0_%D0%A1%D0%BE%D1%84%D1%96%D1%8F_%D0%86%D0%B2%D0%B0%D0%BD%D1%96%D0%B2%D0%BD%D0%B0',
+        ]],
+        ['Алла Горська', [
+            'https://www.uinp.gov.ua/istorychnyy-kalendar/veresen/18/1929-narodylasya-hudozhnycya-alla-gorska',
+            'https://uain.press/blogs/1081487-1081487',
+        ]],
+        ['Олександра Екстер', [
+            'https://uk.wikipedia.org/wiki/%D0%95%D0%BA%D1%81%D1%82%D0%B5%D1%80_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%B0_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D1%96%D0%B2%D0%BD%D0%B0',
+            'https://suspilne.media/360498-avangardistka-oleksandra-ekster-ukrainska-ci-rosijska-amazonka/',
+            'https://uinp.gov.ua/istorychnyy-kalendar/sichen/18/1882-narodylasya-oleksandra-ekster',
+        ]],
+        ['Ганна Собачко-Шостак', [
+            'https://uinp.gov.ua/istorychnyy-kalendar/gruden/15/narodylasya-ganna-sobachko-shostak',
+            'https://uain.press/blogs/1130366-1130366',
+        ]],
+        ['Ґео Шкурупій', [
+            'https://uinp.gov.ua/istorychnyy-kalendar/kviten/20/1903-narodyvsya-geo-shkurupiy-odyn-z-lideriv-ukrayinskogo-literaturnogo-avangardu',
+            'https://vufku.org/names/heo-shkurupij',
+            'https://localhistory.org.ua/texts/statti/korol-na-choli-revoliutsiyi-geo-shkurupii-u-futuropreriiakh/',
+        ]],
+        ['Параска Плитка-Горицвіт', [
+            'https://birdinflight.com/pochemu_eto_shedevr-uk/paraska-plitka-goritsvit-ukrainskaya-viven-majer.html',
+            'https://uk.wikipedia.org/wiki/%D0%9F%D0%BB%D0%B8%D1%82%D0%BA%D0%B0-%D0%93%D0%BE%D1%80%D0%B8%D1%86%D0%B2%D1%96%D1%82_%D0%9F%D0%B0%D1%80%D0%B0%D1%81%D0%BA%D0%B0_%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD%D1%96%D0%B2%D0%BD%D0%B0',
+        ]],
+        ['Ілля Ріпин', [
+            'https://filter.mkip.gov.ua/illya-ripin/',
+            'https://uinp.gov.ua/istorychnyy-kalendar/serpen/5/1844-narodyvsya-hudozhnyk-illya-ryepin',
+            'https://uain.press/blogs/illya-ryepin-ne-chekajte-prislugi-yiyi-nemaye-1068268',
+        ]],
+        ['Архип Куїнджі', [
+            'https://suspilne.media/263328-prometej-ukrainskogo-zivopisu-abo-ak-arhip-kuindzi-nis-u-masi-svitlo/',
+            'https://mistomariupol.com.ua/uk/mariupol-arhypa-kuyindzhi/',
+        ]],
+        ['Агатангел Кримський', [
+            'https://uinp.gov.ua/istorychnyy-kalendar/sichen/15/1871-15-sichnya-u-volodymyr-volynskomu-narodyvsya-agatangel-krymskyy-shodoznavec-perekladach-yakyy-znav-ponad-60-mov-istoryk-odyn-iz-zasnovnykiv-ukrayinskoyi-akademiyi-nauk-u-1918-roci',
+            'https://chytomo.com/ahatanhel-krymskyj-intelektualne-homoerotychne-j-psykholohichne-vid-zabutoho-modernista/',
+            'https://krytyka.com/ua/reviews/natsionalizm-seksualnist-oriientalizm-skladnyy-svit-ahatanhela-krymskoho',
+        ]],
+    ];
+    document.body.innerHTML = `
+    <div class="container text-break my-sm-4 p-3 rounded-5" style="background-color: white; font-family: Courier;">
+        <div class="col" >
+            ${references.map(([title, references]) => `
+                <div>
+                    <h1>${title}</h1>
+                    <ul>
+                        ${references.map((reference) => `
+                            <li>
+                                <a href="${reference}">${reference}</a>    
+                            </li>    
+                        `).join('')}    
+                    </ul>
+                </div>`).join('')}
+        </div>
+    </div> `;
+</script>
+
+</html>
